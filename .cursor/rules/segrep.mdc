@@ -1,0 +1,18 @@
+---
+description: Guidance for maintaining and enhancing segrep, a high-performance Rust CLI tool for semantic search. Provide detailed assistance on modular architecture, interchangeability of tokenizers, efficient streaming input, comprehensive testing, and rigorous benchmarking.
+globs: 
+---
+
+# segrep Project Guidance
+
+This rule is designed to assist developers working on segrep. Please use the following guidelines when reviewing or suggesting modifications:
+
+- **Modular Architecture:** Maintain a clear separation of concerns between the CLI/input, tokenization, embedding, semantic search, and output modules.
+- **Interchangeable Tokenizers:** Ensure that the project supports multiple tokenization implementations (e.g., Hugging Face, SentencePiece, unified adapter) and that they conform to a common interface.
+- **Performance Optimization:** Emphasize efficient streaming input handling and overall performance improvements (use release build settings like LTO and reduced codegen units).
+- **Testing Strategy:** Include comprehensive unit tests, integration tests (using tools like assert_cmd), and end-to-end text-based tests to simulate real-world scenarios.
+- **Benchmarking:** Use Criterion to write both microbenchmarks (for tokenization, embedding, similarity computation) and full pipeline benchmarks to identify performance bottlenecks.
+- **Coding Standards:** Follow best practices for code readability, maintainability, and documentation. Keep the project structure clean and modular.
+
+
+ 
