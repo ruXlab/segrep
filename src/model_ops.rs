@@ -9,6 +9,12 @@ use rust_bert::pipelines::sentence_embeddings::{
 pub fn load_model() -> Result<SentenceEmbeddingsModel> {
     let config = SentenceEmbeddingsConfig::from(SentenceEmbeddingsModelType::AllMiniLmL6V2);
     Ok(SentenceEmbeddingsModel::new(config)?)
+
+    // let config = SentenceEmbeddingsConfig::from(SentenceEmbeddingsModelType::AllMiniLmL6V2);
+    // Ok(SentenceEmbeddingsModel::new(config)?);
+    // let model = SentenceEmbeddingsModel::new(SentenceEmbeddingsModelType::AllMiniLmL6V2)?;
+    // Ok(model)
+
 }
 
 /// Encodes a slice of sentences into their corresponding embedding vectors.

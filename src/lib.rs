@@ -3,7 +3,8 @@ pub mod semantic_grep;
 pub mod tokenizer;
 pub mod model_ops;
 pub mod preprocessing;
-
+pub mod cross_encoder_grep;
+pub mod cross_encoder_sliding_window_grep;
 pub use error::{Result, SegrepError};
 pub use semantic_grep::{SemanticEngine};
 pub use tokenizer::{tokenize, TokenizerError};
